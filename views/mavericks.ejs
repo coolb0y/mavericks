@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To do List</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript">
+      function myFunction() {
+        var checkBox = document.getElementById("myCheck");
+        if (checkBox.checked == true){
+                window.location.href="/delete";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="box" id="heading">
+       <h1>To Do Work List</h1>
+    </div>
+
+<div class="box">
+     <form class="item" action="/" method="post">
+       <div class="label1">
+       <input class="form-check-input" name="" type="checkbox" value="">
+      <label for="">Welcome to your To Do List </label><br>   </div>
+      <div class="label2">
+      <input class="form-check-input" name="checked" type="checkbox" value="">
+     <label for="">Hit + to add new Items </label><br></div>
+     <div class="label3">
+        <input type="checkbox" id="myCheck" onclick="myFunction()">
+       <label for=""><em>&lt</em>-- hit this box to delete an Item</label><br></div>
+        <input type="text" name="newItem" value="" placeholder="Enter new Task Here" class=textBox >
+        <div class="label4">
+        <button type="submit" name="submit" class="addBtn">+</button></div>
+     </form>
+
+    <% for(let i=0;i<newListItem.length;i++){ %>
+       <ul>
+         <li> <%= newListItem[i] %> </li>
+       </ul>
+    <% } %>
+   </div>
+
+  </body>
+  <footer>
+    Made By Ankur Narayan Singh
+  </footer>
+</html>
